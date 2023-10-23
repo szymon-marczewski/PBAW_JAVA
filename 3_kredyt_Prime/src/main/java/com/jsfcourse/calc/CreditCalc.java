@@ -58,11 +58,11 @@ public class CreditCalc {
 			
 			result = (value/months)*(1+(procent/100));
 
-			ctx.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "DONE", null));
+			ctx.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Calculated", null));
 			return true;
 		} catch (Exception e) {
 			ctx.addMessage(null,
-					new FacesMessage(FacesMessage.SEVERITY_ERROR, "ERROR", null));
+					new FacesMessage(FacesMessage.SEVERITY_ERROR, "Please enter the correct values", null));
 			return false;
 		}
 	}

@@ -19,14 +19,15 @@
 
 		<h:form>
 			<h:panelGrid columns="2" cellpadding="5" styleClass="bottom-space">
-				<p:outputLabel for="value" value="Value:" />
-				<p:inputText id="value" value="#{creditCalc.value}" />
+				<p:outputLabel for="value" value="Value:" symbol="EUR"/>
+				<p:inputNumber id="value" value="#{creditCalc.value}" symbol=" EUR" symbolPosition="s" decimalSeparator="," thousandSeparator="." />
 
 				<p:outputLabel for="months" value="Months:" />
 				<p:inputText id="months" value="#{creditCalc.months}" />
 				
 				<p:outputLabel for="procent" value="Procent:" />
-				<p:inputText id="procent" value="#{creditCalc.procent}" />
+				<p:inputNumber id="procent" value="#{creditCalc.procent}" symbol="%"
+                                symbolPosition="s"/>
 				
 				<p:commandButton value="Add" action="#{creditCalc.calc()}" update="msg"/>
 			</h:panelGrid>
