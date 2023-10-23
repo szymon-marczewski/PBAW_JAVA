@@ -1,0 +1,34 @@
+body{
+	font-family: 'Century Gothic',helvetica,verdana,arial;
+	background: url("../img/back.jpg.jsf?ln=template") no-repeat center center fixed;
+	background-size: cover;
+	margin:0;
+}
+
+.bottom-space{
+	margin-bottom: 1em;
+}
+
+.top-space{
+	margin-top: 1em;
+}
+
+.box{
+	padding: 1em;
+	border-radius: 3px;
+	border: 3px;
+	background-color: rgb(245, 230, 192);
+}
+
+#page_wrapper{
+	margin: 1em;
+}
+
+#footer{
+	text-align: center;
+}
+
+.bottom-space{
+	border: 1em;
+	font-size: 14pt;
+}
