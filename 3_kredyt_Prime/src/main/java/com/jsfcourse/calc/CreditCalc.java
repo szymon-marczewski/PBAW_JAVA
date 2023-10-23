@@ -67,7 +67,6 @@ public class CreditCalc {
 		}
 	}
 
-	// Go to "showresult" if ok
 	public String calc() {
 		if (count()) {
 			return "showresult";

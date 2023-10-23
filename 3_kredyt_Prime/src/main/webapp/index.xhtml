@@ -15,7 +15,7 @@
 		
 		<p:panel header="Credit Calculator">
 		
-		<h:messages id="msg" />
+		<p:messages id="msg" />
 
 		<h:form>
 			<h:panelGrid columns="2" cellpadding="5" styleClass="bottom-space">
@@ -28,7 +28,7 @@
 				<p:outputLabel for="procent" value="Procent:" />
 				<p:inputText id="procent" value="#{creditCalc.procent}" />
 				
-				<p:commandButton value="Add" action="#{creditCalc.calc()}"/>
+				<p:commandButton value="Add" action="#{creditCalc.calc()}" update="msg"/>
 			</h:panelGrid>
 			<p:commandLink value="Informations" action="#{creditCalc.info()}" />
 		</h:form>
