@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/templates/page-template.xhtml">
+<h:head>
+<title>Credit Calculator ver3 + PrimeFaces</title>
+</h:head>
+
+	<ui:define name="pageContent">
+		
+		<p:panel header="Credit Calculator">
+		
+		<p:messages id="msg" />
+
+		<h:form>
+			<h:panelGrid columns="2" cellpadding="5" styleClass="bottom-space">
+				<p:outputLabel for="value" value="Value:" symbol="EUR"/>
+				<p:inputNumber id="value" value="#{creditCalc.value}" symbol=" EUR" symbolPosition="s" decimalSeparator="," thousandSeparator="." />
+
+				<p:outputLabel for="months" value="Months:" />
+				<p:inputText id="months" value="#{creditCalc.months}" />
+				
+				<p:outputLabel for="procent" value="Procent:" />
+				<p:inputNumber id="procent" value="#{creditCalc.procent}" symbol="%"
+                                symbolPosition="s"/>
+				
+				<p:commandButton value="Add" action="#{creditCalc.calc()}" update="msg"/>
+			</h:panelGrid>
+			<p:commandLink value="Informations" action="#{creditCalc.info()}" />
+		</h:form>
+		</p:panel>
+	</ui:define>
+
+</ui:composition>
+</html>
